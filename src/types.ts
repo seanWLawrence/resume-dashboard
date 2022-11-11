@@ -6,6 +6,7 @@ export interface Image {
 }
 
 export interface ContactCardProps {
+  heading: string;
   image: Image;
   name: string;
   href: string;
@@ -19,7 +20,7 @@ export type Rating = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 interface MetricItem {
   text: string;
-  rating: Rating;
+  rating?: Rating;
 }
 
 interface Metric {

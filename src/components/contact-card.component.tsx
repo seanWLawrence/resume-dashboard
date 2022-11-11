@@ -2,17 +2,22 @@ import * as React from "react";
 import * as cloudscape from "@cloudscape-design/components";
 
 import { SummaryCard } from "./summary-card.component";
+import { Link } from "./link.component";
 import * as lib from "../lib/index.lib";
 import * as types from "../types";
 
 export const ContactCard: React.FC<types.ContactCardProps> = (props) => {
   return (
-    <SummaryCard heading="Contact">
+    <SummaryCard heading={props.heading}>
       <cloudscape.SpaceBetween size="xl" direction="horizontal">
         <img
           src={lib.getImageSrc(props.image.src)}
           alt={props.image.alt}
-          style={{ maxHeight: "11.5rem", borderRadius: "10%" }}
+          style={{
+            maxHeight: "10rem",
+            maxWidth: "10rem",
+            borderRadius: "10%",
+          }}
         />
         <cloudscape.SpaceBetween direction="vertical" size="xs">
           <cloudscape.Header variant="h3">
@@ -21,10 +26,7 @@ export const ContactCard: React.FC<types.ContactCardProps> = (props) => {
               {props.address.city}, {props.address.state}{" "}
               {props.email && (
                 <cloudscape.Box display="inline">
-                  -{" "}
-                  <cloudscape.Link href={`mailto:${props.email}`}>
-                    Email me
-                  </cloudscape.Link>
+                  - <Link href={`mailto:${props.email}`}>Email me</Link>
                 </cloudscape.Box>
               )}
             </cloudscape.Box>
@@ -37,13 +39,13 @@ export const ContactCard: React.FC<types.ContactCardProps> = (props) => {
           <cloudscape.SpaceBetween direction="horizontal" size="xs">
             {props.socialLinks.map((socialLink) => {
               return (
-                <a href={socialLink.href} key={socialLink.href}>
+                <Link href={socialLink.href} key={socialLink.href}>
                   <img
                     style={{ maxHeight: "2rem" }}
                     src={lib.getImageSrc(socialLink.icon.src)}
                     alt={socialLink.icon.alt}
                   />
-                </a>
+                </Link>
               );
             })}
           </cloudscape.SpaceBetween>

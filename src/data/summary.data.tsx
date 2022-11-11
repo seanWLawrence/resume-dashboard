@@ -1,9 +1,9 @@
 import * as cloudscape from "@cloudscape-design/components";
-import * as components from "../components/index.component";
 import * as types from "../types";
 
 export const summaryData: types.DashboardLayoutProps = {
   contactCard: {
+    heading: "Contact",
     name: "Sean W. Lawrence",
     image: { src: "../assets/avatar.jpeg", alt: "Sean's portrait" },
     href: "https://sean-lawrence.com",
@@ -84,7 +84,7 @@ export const summaryData: types.DashboardLayoutProps = {
     ],
   },
   metricsCard: {
-    heading: "Skills",
+    heading: "Skill mastery",
     metrics: [
       {
         heading: "Technical",
@@ -97,7 +97,7 @@ export const summaryData: types.DashboardLayoutProps = {
           { text: "Systems architecture", rating: 6 },
           { text: "Internationalization", rating: 5 },
           { text: "Threat modeling", rating: 5 },
-          { text: "Performance", rating: 5 },
+          { text: "Performance optimization", rating: 5 },
         ],
       },
       {
@@ -133,7 +133,7 @@ export const summaryData: types.DashboardLayoutProps = {
           { text: "Mentoring engineers", rating: 8 },
           { text: "Sprint/roadmap planning", rating: 7 },
           { text: "On-call support", rating: 7 },
-          { text: "Writing business narratives", rating: 6 },
+          { text: "Business narratives", rating: 6 },
         ],
       },
     ],
