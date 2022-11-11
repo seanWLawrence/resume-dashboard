@@ -1,3 +1,5 @@
+import * as cloudscape from "@cloudscape-design/components";
+import * as components from "../components/index.component";
 import * as types from "../types";
 
 export const summaryData: types.DashboardLayoutProps = {
@@ -23,5 +25,45 @@ export const summaryData: types.DashboardLayoutProps = {
     ],
     description:
       "Senior frontend/full stack engineer that specializes in UI/UX. Currently leading the frontend for Amazon's privacy team.",
+  },
+  accomplishmentsCard: {
+    heading: "Accomplishments",
+    items: [
+      {
+        content: () => (
+          <cloudscape.Box display="inline">
+            Lead UI/UX for privacy consent service that consistently handles{" "}
+            <cloudscape.Box display="inline" fontWeight="bold">
+              over 100K TPS
+            </cloudscape.Box>
+            .
+          </cloudscape.Box>
+        ),
+      },
+      {
+        content: () => (
+          <cloudscape.Box display="inline">
+            Architect and build UI/UX for new AI document translation product
+            handling{" "}
+            <cloudscape.Box display="inline" fontWeight="bold">
+              over 150K documents a year
+            </cloudscape.Box>{" "}
+            in production.
+          </cloudscape.Box>
+        ),
+      },
+      {
+        content: () => (
+          <cloudscape.Box display="inline">
+            Pass all 6 foundational, associate and professional AWS
+            certifications and become{" "}
+            <cloudscape.Box display="inline" fontWeight="bold">
+              an AWS certification subject matter expert
+            </cloudscape.Box>{" "}
+            .
+          </cloudscape.Box>
+        ),
+      },
+    ],
   },
 };

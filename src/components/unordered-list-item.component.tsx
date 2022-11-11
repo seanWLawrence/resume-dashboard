@@ -5,5 +5,5 @@ interface UnorderedListItemProps {
 }
 
 export const UnorderedListItem: React.FC<UnorderedListItemProps> = (props) => {
-  return <li>- {props.children}</li>;
+  return <li>{props.children}</li>;
 };

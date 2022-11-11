@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface Image {
   src: string;
   alt: string;
@@ -15,4 +17,8 @@ export interface ContactCardProps {
 
 export interface DashboardLayoutProps {
   contactCard: ContactCardProps;
+  accomplishmentsCard: {
+    heading: string;
+    items: { content: () => React.ReactNode }[];
+  };
 }

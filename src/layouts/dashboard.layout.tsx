@@ -11,6 +11,17 @@ export const DashboardLayout: React.FC<types.DashboardLayoutProps> = (
     <cloudscape.SpaceBetween size="m" direction="vertical">
       <cloudscape.SpaceBetween direction="horizontal" size="s">
         <components.ContactCard {...props.contactCard} />
+        <components.SummaryCard heading={props.accomplishmentsCard.heading}>
+          <components.List>
+            {props.accomplishmentsCard.items.map((item, index) => {
+              return (
+                <components.UnorderedListItem key={index}>
+                  {item.content()}
+                </components.UnorderedListItem>
+              );
+            })}
+          </components.List>
+        </components.SummaryCard>
       </cloudscape.SpaceBetween>
     </cloudscape.SpaceBetween>
   );
