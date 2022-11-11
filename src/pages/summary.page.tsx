@@ -7,6 +7,7 @@ export default function SummaryPage() {
     <DashboardLayout
       contactCard={summaryData.contactCard}
       accomplishmentsCard={summaryData.accomplishmentsCard}
+      metricsCard={summaryData.metricsCard}
     />
   );
 }

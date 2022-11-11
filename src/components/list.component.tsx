@@ -7,10 +7,8 @@ interface ListProps {
 
 export const List: React.FC<ListProps> = (props) => {
   return (
-    <div style={{ maxWidth: "20rem" }}>
-      <cloudscape.SpaceBetween size="xs" direction="vertical">
-        {props.children}
-      </cloudscape.SpaceBetween>
-    </div>
+    <cloudscape.SpaceBetween size="xs" direction="vertical">
+      {props.children}
+    </cloudscape.SpaceBetween>
   );
 };
